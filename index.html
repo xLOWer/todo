@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>ToDo</title>
+		<!-- CSS overrides - remove if you don't need it -->
+		<link rel="stylesheet" href="css/app.css">
+	</head>
+	<body>
+	<div id="error-viewer"></div>
+	<div id="login-area">
+		<input id="login-text" class="input-text" type="text" placeholder="login" autofocus>
+		<input id="password-text" class="input-text" type="password" placeholder="password">
+		<input id="login-button" class="input-button" type="button" value="log in">
+		<input id="register-button" class="input-button" type="button" value="register">
+	</div>
+		<section class="todoapp">
+			<input id="logout-button" class="input-button" type="button" value="log out">
+			<header class="header">
+				<h1>ToDo</h1>
+				<input class="new-todo" placeholder="What needs to be done?">
+			</header>
+			<section class="main">
+				<input id="toggle-all" class="toggle-all" type="checkbox">
+				<label for="toggle-all">Mark all as complete</label>
+				<ul class="todo-list">
+					<li class="completed">
+						<div class="view">
+							<input class="toggle" type="checkbox" checked>
+							<label>Taste JavaScript</label>
+							<button class="destroy"></button>
+						</div>
+						<input class="edit" value="Create a TodoMVC template">
+					</li>
+					<li>
+						<div class="view">
+							<input class="toggle" type="checkbox">
+							<label>Buy a unicorn</label>
+							<button class="destroy"></button>
+						</div>
+						<input class="edit" value="Rule the web">
+					</li>
+				</ul>
+			</section>
+			<!-- This footer should hidden by default and shown when there are todos -->
+			<footer class="footer">
+				<!-- This should be `0 items left` by default -->
+				<span class="todo-count"><strong>0</strong> item left</span>
+				<!-- Remove this if you don't implement routing -->
+				<ul class="filters">
+					<li>
+						<a id="all" class="selected" href="#/">All</a>
+					</li>
+					<li>
+						<a id="active" href="#/active">Active</a>
+					</li>
+					<li>
+						<a id="completed" href="#/completed">Completed</a>
+					</li>
+				</ul>
+				<!-- Hidden if no completed items are left ↓ -->
+				<button class="clear-completed">Clear completed</button>
+			</footer>
+		</section>
+		<footer class="info">
+			<p>Double-click to edit a todo</p>
+			<!-- Remove the below line ↓ -->
+			<p>Template by <a href="http://sindresorhus.com">Sindre Sorhus</a></p>
+			<!-- Change this out with your name and url ↓ -->
+			<p>Created by <a href="http://xlower.ru">xlower</a></p>
+		</footer>
+		<!-- Scripts here. Don't remove ↓ -->
+		<script src="js/jquery3.3.1.min.js"></script>
+		<script src="js/md5.min.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>
